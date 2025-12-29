@@ -32,4 +32,5 @@
     1. Cut [Time Neg, Time Pos] for Timetick
     1. Save sparse format
     1. TODO: Figure out cut values
-        1. Look at distribution?
+        1. Look at distribution? Fixed size, need reference wire/time range with respect to neutrino vertex
+        2. Event by event: Take min/max of wire/time tick after removing low energy depostions (`cateogory`: other) $\rightarrow$ This seems more reliable
