@@ -2,3 +2,26 @@
 1. Need to check whether `File` from `pynuml.io` can be used: Issue still persists. Need to replace with `File` from `file.py`
 2. Remove information not needed: Optical, Pandora? Pandora could be used as classification reference
 3. Plane 0 and 1 already deconvolved. What is the difference with Hits? After detsim and some processing? Only difference is gaussian blur, still, use wire data
+
+
+# 2025-12-29: Preprocessing data with given labels
+1. Take SPINE NC Delta Selection as reference. What MC Truth is used for signal?
+    1. 
+1. What is available in uB open samples?
+    1. NC/CC
+    1. Particle Category in G4 stage:
+    ```
+    class category(enum.Enum):
+    pion = 0
+    muon = 1
+    kaon = 2
+    proton = 3
+    electron = 4
+    michel = 5
+    delta = 6
+    other = 7
+    photon = 8
+    ```
+    1. Should be able to label based on topology. e.g. 1g0e0mu0pi, etc ...
+    1. Impossible to do interaction based, like NC Delta, NC CO, etc. Need GENIE info.
+1. Try simple first. Train with track-like particles only, evaluate with shower-like particles.
