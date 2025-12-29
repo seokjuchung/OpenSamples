@@ -22,7 +22,8 @@ for file_path in file_list:
         f.add_group(t)
     f.read_data(0, len(f))
     parts = f.get_dataframe_evt('particle_table')
-    primaries = parts.loc[parts['start_process'] == b'primary'].copy()
+    # primaries = parts.loc[parts['start_process'] == b'primary'].copy()
+    primaries = parts
     all_primaries.append(primaries)
 
 # Remove empty DataFrames
@@ -65,7 +66,10 @@ except Exception as e:
     raise
 
 # Print all unique g4_pdg values in the primaries DataFrame
-print("Unique g4_pdg values:", all_primaries_df['g4_pdg'].unique())
+unique_pdg, counts = np.unique(all_primaries_df['g4_pdg'], return_counts=True)
+print("Unique g4_pdg values and their frequencies:")
+for pdg, count in zip(unique_pdg, counts):
+    print(f"  {pdg}: {count}")
 
 # Prepare data for stacked histogram: group by g4_pdg and category
 pdg_values = all_primaries_df['g4_pdg'].unique()
