@@ -23,5 +23,13 @@
     photon = 8
     ```
     1. Should be able to label based on topology. e.g. 1g0e0mu0pi, etc ...
-    1. Impossible to do interaction based, like NC Delta, NC CO, etc. Need GENIE info.
-1. Try simple first. Train with track-like particles only, evaluate with shower-like particles.
+    1. Impossible to do interaction based, like NC Delta, NC CO, etc. Need GENIE info
+1. Try simple first. Train with track-like particles only, evaluate with shower-like particles
+1. ISSUE: `category` and `g4_pdg` not aligning? Ask Giuseppe
+1. How to preprocess data?
+    1. Find Neutrino vertex
+    1. Cut [Wire Neg, Wire Pos] for Wire
+    1. Cut [Time Neg, Time Pos] for Timetick
+    1. Save sparse format
+    1. TODO: Figure out cut values
+        1. Look at distribution?
