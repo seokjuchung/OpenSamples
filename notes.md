@@ -43,4 +43,6 @@
     1. Save square region of wire data to separate array
         1. Do downsizing? Look what other studies using uB open data did
             * The sparsePIX paper used 6 times downsizing with 10/100 cutoff as given from the notebook
-    
+1. Train/test/val
+    1. 70/10/20 for sparse
+    1. 2/3, 1/6, 1/6 seems reasonable (9, 3, 3) files each
