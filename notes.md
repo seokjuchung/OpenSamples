@@ -49,3 +49,9 @@
 1. Currently saving files in sparse manner, and skipping over files without any non-cosmic,LED signal
     * Might need to save a separate version of MCTruth with same criteria for matching
     * Info already light and in original hdf5, no need for that. Refer to `Sample Exploration.ipynb`
+1. Next steps:
+    1. Train on whole processed data
+        1. Is anything obviously anomalous? (ex: Shower/Track/Kaon/etc.)
+        1. If not, train on particular subset
+    1. Train on subset
+        1. Particular topology: Shower/Track only, eval on Track/Shower, etc.
