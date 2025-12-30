@@ -45,4 +45,7 @@
             * The sparsePIX paper used 6 times downsizing with 10/100 cutoff as given from the notebook
 1. Train/test/val
     1. 70/10/20 for sparse
-    1. 2/3, 1/6, 1/6 seems reasonable (9, 3, 3) files each
+    1. 2/3, 1/6, 1/6 seems reasonable (12, 3, 3) files each
+1. Currently saving files in sparse manner, and skipping over files without any non-cosmic,LED signal
+    * Might need to save a separate version of MCTruth with same criteria for matching
+    * Info already light and in original hdf5, no need for that. Refer to `Sample Exploration.ipynb`
