@@ -4,9 +4,8 @@
 3. Plane 0 and 1 already deconvolved. What is the difference with Hits? After detsim and some processing? Only difference is gaussian blur, still, use wire data
 
 
-# 2025-12-29: Preprocessing data with given labels
+# 2025-12-29: Preprocessing data with given labels - planning
 1. Take SPINE NC Delta Selection as reference. What MC Truth is used for signal?
-    1. 
 1. What is available in uB open samples?
     1. NC/CC
     1. Particle Category in G4 stage:
@@ -34,3 +33,14 @@
     1. TODO: Figure out cut values
         1. Look at distribution? Fixed size, need reference wire/time range with respect to neutrino vertex
         2. Event by event: Take min/max of wire/time tick after removing low energy depostions (`cateogory`: other) $\rightarrow$ This seems more reliable
+
+
+# 2025-12-30: Preprocessing data with given labels - execution
+1. Procedure (per event)
+    1. Take neutrino interaction
+    1. Remove `category`: other
+    1. Look at min/max wire/timetick on plane2
+    1. Save square region of wire data to separate array
+        1. Do downsizing? Look what other studies using uB open data did
+            * The sparsePIX paper used 6 times downsizing with 10/100 cutoff as given from the notebook
+    
